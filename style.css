@@ -489,11 +489,25 @@ display: flex;
     }
 	.dim .conten  h2{
 		font-size: 2.5em;
-    font-family: 'Arvo', serif;
+    
+		font-family: 'Arvo', serif;
     text-transform: uppercase;
     font-weight: 400;
     color: #7e7e7e;
 	text-align: center;
 
 	}
-	
+	@media (max-width:991px)
+	{
+		.contact
+		{
+			padding: 50px;
+		}
+		.contin{
+			flex-direction: column;
+		}
+		.contain .contactinfo,.contactform{
+			margin-bottom: 40px ;
+			width: 100%;
+		}
+	}
