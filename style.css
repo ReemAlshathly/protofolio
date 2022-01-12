@@ -212,16 +212,7 @@ display: table;
     display: block;
     background-color: #c7abf6;
 }
-.services{
-display: block;
-    margin: 0 auto;
-	clear: both;
-	padding: 80px 0;
-	text-align: left;
-    word-wrap: break-word;
-	display: table;
-    content: "";
-}
+
 .sectiontitle {
     display: block;
     max-width: 55%;
@@ -452,7 +443,7 @@ display: flex;
 .contactform .inputBox input ,textarea{
 	padding: 5px 0;
 	font-size: 16px;
-	margin: 10px 0;
+	margin: 4px 0;
 	border: none;
 	border-bottom: 2px solid #fff;;
 	outline: none;
@@ -510,4 +501,90 @@ display: flex;
 			margin-bottom: 40px ;
 			width: 100%;
 		}
+	}
+	//////////////////////////////////
+	.services-section{
+		height: 150vh;
+		width: 100%;
+		display: grid;
+		place-items: center;
+		background:#dedede ;
+	}
+	.se-hed{
+		color: #7e7e7e ;
+		margin-bottom: 2em;
+		margin-top: 2em;
+	}
+	.ro{
+		display: flex;
+		flex-wrap: wrap;
+	
+	}
+	.col{
+		width: 100%;
+		
+		border: 1px solid #dedede ;
+		padding: 0 1em 1em 1em;
+		text-align: center;
+	}
+	.card{
+	
+	width: 100%;
+	height: 100%;
+	padding: 3em 1em;
+	background: linear-gradient(#fff 50%, #c7abf6 50%);
+	background-size: 100% 200%;
+	background-position: 0 2.5%;
+	border-radius: 5px;
+	box-shadow: 0 0 35px rgba(0,0,0,0.12);
+	cursor: pointer;
+	}
+	.card h3{
+		font-size: 20px;
+		font-weight: 600;
+		color: #7e7e7e;
+		margin: 1em 0;
+	
+	}
+	.card p{
+		font-size: 15px;
+		line-height: 1.6;
+		color: burlywood;
+		letter-spacing: 0.03em
+		
+	
+	}
+	.ico-up{
+		background-color: #c7abf6;
+		position: relative;
+		margin: auto;
+		font-size:30px ;
+		height:2em ;
+		width: 2.5em;
+		color: #7e7e7e;
+		border-radius: 50%;
+		display: grid;
+		place-items:center;
+		transition: 0.5s;
+	}
+	.card:hover{
+		background-position: 0 100%;
+	
+	
+	}
+	.card:hover .ico-up{
+		background-color: #fff;
+		color: #7e7e7e
+		;
+	}
+	.card:hover h3{
+		
+		color: #7e7e7e
+		
+	
+	}
+	.card p{
+		
+		color: #7e7e7e
+	
 	}
