@@ -503,6 +503,19 @@ display: flex;
 			margin-bottom: 40px ;
 			
 		}
+		[class*="col-"] {
+   
+			float: left;
+			
+			padding-right: 0vw;
+			padding-left: 9vw;
+		}
+		.skills {
+			width: 120%;
+			margin: 0px;
+			height: 10px;
+			background: #dedede;
+		}
 	}
 	//////////////////////////////////
 	.services-section{
