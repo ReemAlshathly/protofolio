@@ -263,10 +263,10 @@ row::after {
 }
 
 [class*="col-"] {
-    float: left;
-	padding-left: 36vh;
-	padding-right: 30vh;
-
+   
+	float: left;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 footer {
     display: block;
