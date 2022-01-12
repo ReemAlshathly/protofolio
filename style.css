@@ -383,6 +383,7 @@ padding-right: .3rem;
 	flex-direction: column;
 	padding-left: 5px;
 	padding-right: 100px;
+	padding-bottom: 2em;
 }
 .contin .contactinfo .box{
 position: relative;
@@ -421,9 +422,10 @@ display: flex;
 }
 .contactform{
 	width: 120%;
-	padding-left: 40%;
-    padding-right: 40%;
-	background: #7e7e7e;
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: #7e7e7e;
     height: 40%;
 
 }
@@ -499,7 +501,7 @@ display: flex;
 		}
 		.contain .contactinfo,.contactform{
 			margin-bottom: 40px ;
-			width: 100%;
+			
 		}
 	}
 	//////////////////////////////////
@@ -514,6 +516,8 @@ display: flex;
 		color: #7e7e7e ;
 		margin-bottom: 2em;
 		margin-top: 2em;
+		margin-left: 45vw;
+		font-size: 2vw;
 	}
 	.ro{
 		display: flex;
