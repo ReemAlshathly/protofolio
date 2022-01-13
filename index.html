@@ -8,7 +8,73 @@
 <link href="style.css" rel="stylesheet" type="text/css" media="all" />	    
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+        
+        <script>  
+            function validateform(){  
+           var name=document.myform.name.value;  
+           var Message=document.myform.Message.value;
+           var nameer=document.getElementById('nameerror');
+           var emailerr=document.getElementById('');
+           var meserr=document.getElementById('meserror');
+           if (name==null || name==""){  
+            nameer.innerHTML="Name can't be blank";  
+             return false;  
+           }else if( name.length < 3 || name.length > 10){  
+            nameer.innerHTML="name must be at least 10 characters long and more than 3.";  
+             return false;  
+             }  
+           
+          /* else if(url != urlExp ) {
+               alert("your url falsee");  
+             return false; 
+           }*/
+           else if(Message.length<20 ) {
+            meserr.innerHTML="your message must be more than 20 character ";  
+               return false; 
+       }}
+   
+   
+           </script> 
+           <script>
+               let c=document.createElement("canvas");
+               let img1= new Image();
+               img1.onload=function(){
+                  document.getElementById("image1").remove();
+                  w= img1.width;
+                  h= img1.height;
+                  c.width =w;
+                  c.height=h;
+                  ctx=c.getContext("2d");
+                  ctx.drawImage(img1,0,0);
+                  
 
+
+                  let pixelArr =ctx.getImageData(0,0,w,h).data;
+                  let sample_size =40;
+                  for(let y=0;y<h;+=sample_size)
+                  for (let x=0;x<w;x+=sample_size)
+
+                  let img2= new Image();
+                  img2.src= c.toDataURL("img/jpeg");
+                  img2.width=600;
+                  document.body.appendChild(img2);
+
+               }
+               img1.src= document.getElementById("image1").src;
+           </script>
+           <script type="text/javascript">
+            function OnMouseIn(elem) {
+                elem.style.width = "320px";
+                elem.style.hight = "320px";
+            }
+            function OnMouseOut(elem) {
+                elem.style.width = "";
+                elem.style.hight = "";
+            }
+        </script>
 
 </head>
 <body>
@@ -16,7 +82,7 @@
           <div class="container"> 
              <div class="header-top">
                    <div class="logo">
-                    <a href="index.html"><img src="img/Reem-designstyle-pastel-m.png" width="40%" height="10%" alt=""/></a>
+                    <a href="index.html"><img src="img/Reem-designstyle-pastel-m.png" width="40%" height="10%" alt="" /></a>
                  </div>
                <div class="top-menu">
                  
@@ -25,6 +91,7 @@
                     <li><a href="#about" class="scroll"><span data-hover="about">about</span></a></li>
                     <li><a href="#services" class="scroll"><span data-hover="services">services</span></a></li>
                     <li><a href="#contact" class="scroll"><span data-hover="contact">contact</span></a></li>
+                    <li><button  onclick="myFunction()"><i class="fa fa-moon-o" aria-hidden="true"></i>mode</button></li>
                    
                  </ul>
                  </div>
@@ -40,9 +107,10 @@
             <div class="about-section" id="home" >
         <div class="container">
             <div class="about-header">
-                <h3>How is me</h3>
+                <h3>Who is me</h3>
                 <div class="about-imag">
-                <img src="img/me.PNG" alt=""/>
+                <img  id="image1" src="img/me.PNG" alt="" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" >
+                
                 </div>
                 <div class="about-text">
                         <p> Reem Alshathely Web Designer, holds a Bachelor's degree in Information Technology Engineering - College of Engineering, Taiz University
@@ -267,9 +335,53 @@
                 </div>
             
         </section>
+        <div class="main-container">
+            <h2>Previous Work</h2>
+            <div class="box-container">
+                <div class="content">
+                    <img src="img/screencapture-file-C-Users-Reem-Alshathly-Desktop-Rowad-cofee-home-html-2022-01-13-10_21_56.png" alt="">
+                    <p>this page i desgin it when we pretrining </p>
+              
+                   
+                </div>
+                <div class="content">
+                    <img  class="im-w" src="img/screencapture-file-C-Users-Reem-Alshathly-Desktop-Rowad-Activity-2-index-html-2022-01-13-10_29_31.png" alt="">
+                    <p>this page i desgin it when we pretrining</p>
+                    
+                   
+                </div>
+                <div class="content">
+                    <img src="img/screencapture-file-D-startbootstrap-shop-homepage-gh-pages-startbootstrap-shop-homepage-gh-pages-je-html-2022-01-13-10_49_32.png" alt="">
+                    <p>this page i desgin it for dresses shop maybe before 2 years</p>
+                    
+                   
+                </div>
+                
+              
+                <div class="content">
+                    <img src="img/screencapture-file-D-2-proj-html-2022-01-13-10_38_15.png" alt="">
+                    <p>this page i draw it with p5 evening mode</p>
+                    
+                   
+                </div>
+                <div class="content">
+                    <img src="img/screencapture-file-C-Users-Reem-Alshathly-Desktop-Rowad-reem-quiz-quiz-html-2022-01-13-10_22_36.png" alt="">
+                    <p>this page i desgin it when we pretrining</p>
+                    
+                    
+                </div>
+                <div class="content">
+                    <img src="img/screencapture-file-D-2-proj-html-2022-01-13-10_41_37.png" alt="">
+                    <p>this page i draw it with p5 morning mode.</p>
+                   
+                    
+                </div>
+                
+            </div>
+        </div>
         <br>
         <hr>
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" name="cont-dark">
             <div class="conten">
                 <h2> Contact us</h2>
                 <br>
@@ -319,27 +431,29 @@
                     </div>
                
                 <div class="contactform">
-                    <form>
+                    <form name="myform" method="post" action="" onsubmit="return validateform()" >
                         <h2>Send Message</h2>
                         <div class="inputBox">
-                            <input type="text" name="" required="required">
+                            <input type="text" name="name" >
                             <span>Full Name</span>
+                            <div id="nameerror" class="error"></div>
     
                         </div>
                         <div class="inputBox">
-                           <input type="text" name="" required="required">
+                           <input type="email" name="Email" required="required">
                            <span>Email</span>
+                           <div id="emailerror" class="error"></div>
                            
                            
                        </div>
                        <div class="inputBox">
-                        <textarea required></textarea>
+                        <textarea name ="Message"required></textarea>
                         <span>Type your Message...</span>
-                        
+                        <div id="meserror" class="error"></div>
                         
                     </div>
                     <div class="inputBox">
-                     <input type="submit" name="" value="Send">
+                     <input type="submit" value="register">
                      
                      
                  </div>
@@ -353,27 +467,21 @@
             
     
         </section>
+        
         <footer class="container">
-            <ul class="footer-items">
-                <li>
-                   
-                        Information
-                    
-                </li>
-                <li>
-                    
-                        Contact us
-                    
-                </li>
-                <li>
-                    
-                        callus
-                    
-                </li>
-               
-            </ul>
+            
             <div class="copy-right">
                 Copyright 2022 - <span>Reem Alshathely</span> All rights reserved
             </div>
         </footer> 
+        
+        <script>
+            function myFunction() {
+               var element = document.body;
+               
+               element.classList.toggle("dark-mode");
+              
+            }
+            </script>
         </body>
+       
