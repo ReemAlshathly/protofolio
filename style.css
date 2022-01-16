@@ -702,6 +702,9 @@ height: 50%;
 			font-size: 55%;
 	
 		}
+
+		.contactform .inputBox input[type="submit"]{
+			width: 50%;}
 		.main-container .box-container .content{
 			padding: 20px 3rem;
 		}}
